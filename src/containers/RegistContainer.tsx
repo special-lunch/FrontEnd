@@ -1,21 +1,20 @@
 import React from "react";
 import TextInput from "../components/Input/TextInput";
-import styles from "./MainContainer.module.scss";
 import Button from "../components/button/Button";
-
-function MainContainer() {
+import styles from "./RegistContainer.module.scss";
+const RegisteContainer = () => {
   return (
     <div className={styles["container"]}>
       <div className={styles["contents"]}>
         <div className={styles["login-box"]}>
           <TextInput text="이메일" type="email" />
           <TextInput text="비밀번호" type="password" />
-          <Button text="로그인" />
+          <TextInput text="비밀번호 확인" type="password" />
           <Button text="회원가입" />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default React.memo(MainContainer);
+export default RegisteContainer;
